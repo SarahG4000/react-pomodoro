@@ -1,14 +1,10 @@
 /* creation d'un pomodoro
- * /src/app.js - container for app
+ * /src/seed/ - constants for app pomodoro
  * code by sarahG4000 for becode formation
  * creation for montagne
  * merci leny pour cette bonne pratique,
  * ça me permet de mieux comprendre ce que je fais et de decouper monn code pour m'y retrouvée
  */
 
-import React from "react";
-import ReactDOM from "react-dom";
-
-import Pomodoro from "./components/pomodoro";
-
-ReactDOM.render(<Pomodoro />, document.querySelector("#app"));
+export const SESSION_TIMER = 3000; // 1500 qui est egale a 25min et 300 a 5 min mais ici ça sera pas 50min donc 3000
+export const SESSION_TIMER_PAUSE = 600; // 10min de pause

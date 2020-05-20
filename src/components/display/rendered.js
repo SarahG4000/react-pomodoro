@@ -1,5 +1,5 @@
 /* creation d'un pomodoro
- * /src/app.js - container for app
+ * /src/components/display/rendered.js - Display for app
  * code by sarahG4000 for becode formation
  * creation for montagne
  * merci leny pour cette bonne pratique,
@@ -7,8 +7,12 @@
  */
 
 import React from "react";
-import ReactDOM from "react-dom";
+import PropTypes from "prop-types";
 
-import Pomodoro from "./components/pomodoro";
+const Rendered = ({value}) => <span>{`${value}`.padStart(2, "0")}</span>;
 
-ReactDOM.render(<Pomodoro />, document.querySelector("#app"));
+Rendered.propTypes = {
+    value: PropTypes.number.isRequired,
+};
+
+export default Rendered;
