@@ -3,4 +3,4 @@
  * code by sarahG4000 for becode formation
  * creation for montagne
  */
-console.log("hello pomodoro");
+console.warn("hello pomodoro");
