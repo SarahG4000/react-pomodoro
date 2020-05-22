@@ -12,7 +12,7 @@ import Button from "./button";
 import {NBSP} from "../../seed/constants";
 
 const Tools = ({running, onStartBreak, onReset, onPlus, onMinus}) => (
-    <div className={"box"}>
+    <div className={"is-flex"}>
         <Button
             label={"-"}
             title={"Remove one minute"}
