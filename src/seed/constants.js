@@ -8,3 +8,4 @@
 
 export const SESSION_TIMER = 3000; // 1500 qui est egale a 25min et 300 a 5 min mais ici ça sera pas 50min donc 3000
 export const SESSION_TIMER_PAUSE = 600; // 10min de pause
+export const NBSP = "\u00a0"; //un espace insécable (traduction un espace incassable)
