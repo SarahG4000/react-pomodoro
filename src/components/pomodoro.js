@@ -5,15 +5,18 @@
  * merci leny pour cette bonne pratique,
  * ça me permet de mieux comprendre ce que je fais et de decouper monn code pour m'y retrouvée
  */
-import React, {useState, useCallback} from "react";
+import React, {useCallback} from "react";
 import {SESSION_TIMER} from "../seed/constants";
 
 import Display from "./display/display";
 import Tools from "./tools/tools";
+import useTimer from "../seed/hooks/use-timer";
 
 const Pomodoro = () => {
-    const [seconds, setSeconds] = useState([SESSION_TIMER]);
-    const [running] = useState(false);
+    const [{seconds, running}, {setSeconds, setRunning}] = useTimer(
+        SESSION_TIMER,
+        false,
+    );
     //ou setSeconds(Math.max(seconds-60,0));
     const handleMinus = useCallback(
         () => setSeconds(seconds < 60 ? 0 : seconds - 60),
@@ -23,7 +26,10 @@ const Pomodoro = () => {
         seconds,
         setSeconds,
     ]);
-    const handleStartBreak = () => console.warn("handleStartBreak");
+    const handleStartBreak = useCallback(() => setRunning(!running), [
+        running,
+        setRunning,
+    ]);
     const handleReset = useCallback(() => setSeconds(SESSION_TIMER), [
         setSeconds,
     ]);
