@@ -49,12 +49,8 @@ const Modal = ({show = false, onClose, onRestart}) => {
         <div style={containerStyles}>
             <div className={"box"}>
                 <h4> {"It's over!"} </h4>
-                <p> {"Please, take a short break."} </p>
-                <p>
-                    {
-                        "When the pause timer will be over, a new session will start."
-                    }
-                </p>
+                <p> {"Please, Take a break. You've earned it.."} </p>
+                <p>{"when the break is over a new timer will start."}</p>
                 <Display seconds={seconds} running={running} />
                 <div className={"is-flex"}>
                     <Button label={"Stop"} onClick={stopThen(onClose)} /> {NBSP}
