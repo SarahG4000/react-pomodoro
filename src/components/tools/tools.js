@@ -37,7 +37,7 @@ const Tools = ({running, onStartBreak, onReset, onPlus, onMinus}) => (
     </div>
 );
 
-Tools.prototype = {
+Tools.propType = {
     running: PropType.bool,
     onStartBreak: PropType.func.isRequired,
     onReset: PropType.func.disabled,

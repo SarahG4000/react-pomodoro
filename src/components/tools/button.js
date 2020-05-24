@@ -6,30 +6,26 @@
  * ça me permet de mieux comprendre ce que je fais et de decouper monn code pour m'y retrouvée
  */
 import React from "react";
-import PropType from "prop-types";
+import PropTypes from "prop-types";
 
 const Button = ({label, title, disabled = false, onClick}) => (
     <button
         onClick={onClick}
         disabled={disabled}
-        className={[
-            "button",
-            "is-success",
-            "is-outlined",
-            "is-large",
-            "is-fullwidth",
-        ].join(" ")}
+        className={["button", "is-primary", "is-medium", "is-fullwidth"].join(
+            " ",
+        )}
         type={"button"}
         title={title || label}>
         {label}
     </button>
 );
 
-Button.prototype = {
-    label: PropType.string.isRequired,
-    title: PropType.string,
-    disabled: PropType.bool,
-    onClick: PropType.func.isRequired,
+Button.propTypes = {
+    label: PropTypes.string.isRequired,
+    title: PropTypes.string,
+    disabled: PropTypes.bool,
+    onClick: PropTypes.func.isRequired,
 };
 
 export default Button;

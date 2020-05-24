@@ -5,7 +5,6 @@
   "main": "index.js",
   "private": true,
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "lint": "npx eslint --fix --cache src",
     "build": "npx parcel build src/index.html",
     "work": "npx parcel src/index.html --log-level 4"
