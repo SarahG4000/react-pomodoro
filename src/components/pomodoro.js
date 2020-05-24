@@ -36,7 +36,7 @@ const Pomodoro = () => {
     return (
         <div className={["columns", "is-mobile", "is-centered"].join(" ")}>
             <div className={["column", "is-half"].join(" ")}>
-                <Display seconds={seconds} running={running} />
+                <Display seconds={seconds} />
                 <Tools
                     running={running}
                     onMinus={handleMinus}
